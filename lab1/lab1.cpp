@@ -39,18 +39,23 @@ int main() {
     printf("Device: %s\n", device_str);
 
     while (!glfwWindowShouldClose(window)) {
-        glClearColor(0.2f, 0.3f, 0.4f, 1.0f);
+        glClearColor(0.5, 0.2, 0.7, 1.0);
         glClear(GL_COLOR_BUFFER_BIT);
-
+        glColor3f(1.0, 1.0, 1.0);
         glBegin(GL_TRIANGLES);
-
-        glColor3f(0.0, 1.0, 0.0);
         glVertex2f(0.0, 0.5);
-        glVertex2f(-0.5, -0.5);
-        glVertex2f(0.5, -0.5);
-
+        glVertex2f(-0.1, 0.0);
+        glVertex2f(0.1, 0.0);
+        glVertex2f(0.0, -0.5);
+        glVertex2f(-0.1, 0.0);
+        glVertex2f(0.1, 0.0);
+        glVertex2f(-0.5, 0.0);
+        glVertex2f(0.0, 0.1);
+        glVertex2f(0.0, -0.1);
+        glVertex2f(0.5, 0.0);
+        glVertex2f(0.0, 0.1);
+        glVertex2f(0.0, -0.1);
         glEnd();
-
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
